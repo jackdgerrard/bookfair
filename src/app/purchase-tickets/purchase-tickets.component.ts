@@ -6,15 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./purchase-tickets.component.scss']
 })
 export class PurchaseTicketsComponent implements OnInit {
-  total = 0;
-
-  constructor() { }
+   total: number;
+  constructor() {
+    this.total = 0;
+   }
 
   ngOnInit() {
   }
 
-  onClick() {
-    this.total += 5;
+  incrementTotal() {
+    this.total ++;
   }
 
 }

@@ -21,10 +21,14 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ExhibitorsComponent } from './exhibitors/exhibitors.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { PurchaseTicketsComponent } from './purchase-tickets/purchase-tickets.component';
-
+import { MatSliderModule } from '@angular/material/slider';
+import { MatFormFieldModule, MatFormField } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { FormsModule } from '@angular/forms';
-import { TicketComponent } from './ticket/ticket.component'; // <-- NgModel lives here
+import { TicketComponent } from './ticket/ticket.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +55,11 @@ import { TicketComponent } from './ticket/ticket.component'; // <-- NgModel live
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
