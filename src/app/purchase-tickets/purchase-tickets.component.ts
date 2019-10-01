@@ -3,6 +3,11 @@ import { Component, OnInit } from '@angular/core';
 class Ticket {
   name: string;
   price: number;
+
+  constructor(x: string, y: number){
+    this.name = x;
+    this.price = y;
+  }
 }
 
 @Component({
@@ -24,9 +29,7 @@ export class PurchaseTicketsComponent implements OnInit {
 
   incrementTotal() {
     this.total ++;
-    this.tickets.push();
+    this.tickets.push(new Ticket('john', 5));
   }
 
 }
-
-

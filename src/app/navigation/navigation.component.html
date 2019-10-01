@@ -9,6 +9,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
+    <!--toolbar-->
     <mat-toolbar color="primary">
       <button
         type="button"
@@ -18,10 +19,13 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Cork City Book Fair</span>
+      <a id="title" routerLink="">Cork City Book Fair</a>
     </mat-toolbar>
     <!-- embed router outlet and footer in the toolbar to solidfy grid layout -->
     <router-outlet></router-outlet>
-    <app-app-footer></app-app-footer>
+    <!-- ad space -->
+    <aside id="ad-space">Your Ad Here</aside>
+    <!-- footer-->
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

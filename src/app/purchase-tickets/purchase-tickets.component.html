@@ -1,11 +1,12 @@
-<button mat-icon-button aria-label="new ticket" id="add-ticket"> <mat-icon>add</mat-icon> </button>
-<button mat-flat-button id="proceed">proceed to payment</button>
+<button mat-icon-button aria-label="new ticket" id="add-ticket" (click)="incrementTotal()" >
+     <mat-icon>add</mat-icon> 
+</button>
 
-
-
-<ng-template ngFor let-item [ngForOf]="items" let-i=total [ngForTrackBy]="trackByFn">
-    <app-ticket></app-ticket>
-</ng-template>
+    <app-ticket *ngFor="let ticket of tickets"></app-ticket>
 
 
 <p>Total: {{total}}</p>
+
+<button mat-flat-button id="proceed">
+        proceed to payment
+</button>
