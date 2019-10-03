@@ -28,6 +28,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { FormsModule } from '@angular/forms';
 import { TicketComponent } from './ticket/ticket.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { TicketComponent } from './ticket/ticket.component';
     MatSliderModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
