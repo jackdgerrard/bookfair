@@ -1,45 +1,69 @@
-*{font-family: 'Pacifico', cursive;}
+content *{font-family: 'Pacifico', cursive;}
 
 .sidenav-container {
   height: 100%;
 }
 
 .sidenav {
-  width: 28vw;
+  width: 18%;
+  background: #F2994A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#title{
+  text-decoration: none;
+  color: #fff;
+  background: -webkit-linear-gradient(#F2C94C, #F2994A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Pacifico', cursive;
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
+  margin-left:1vw;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background: #141E30;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 mat-sidenav-content{
-  display: grid;
-  grid-template-areas: "toolbar toolbar"
-                        "content ads"
-                        "footer footer";
-  grid-template-columns: 150px 1fr 150px;
-  grid-template-rows: 100px 
-                      1fr
-                      30px;
-  grid-gap: 20px;
+  // background
+  background: url("/assets/bookshelves.jpg");
+  background-size: 100%;
+  background-color: rgba(0,0,0, 0.6);
+  color: white;
 }
 
-#title{
-  text-decoration: none;
-  color: #fff;
+#the-grid{
+    //grid
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
 }
 
-#ad-space{
-  width:200px;
-  height: 100%;
-  background-color: #ccc;
+#content{
+  grid-column-start: 1;
+  grid-row-start :1;
+}
+
+aside{
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: rgba(53, 29, 29, 0.6);
   color: #eee;
   text-align: center;
   padding-top:50%;
   text-shadow: 2px 1px #141E30;
+}
+
+app-footer{
+  grid-row-start: 2;
 }

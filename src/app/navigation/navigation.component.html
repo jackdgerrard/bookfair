@@ -9,6 +9,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
+    
     <!--toolbar-->
     <mat-toolbar color="primary">
       <button
@@ -21,11 +22,20 @@
       </button>
       <a id="title" routerLink="">Cork City Book Fair</a>
     </mat-toolbar>
-    <!-- embed router outlet and footer in the toolbar to solidfy grid layout -->
-    <router-outlet></router-outlet>
-    <!-- ad space -->
-    <aside id="ad-space">Your Ad Here</aside>
-    <!-- footer-->
-    <app-footer></app-footer>
+
+    <!-- grid -->
+    <section id="the-grid">
+      
+      <!-- embed router outlet and footer in the nav content area to solidfy grid layout -->
+      <article id="content">
+        <router-outlet></router-outlet>
+      </article>
+      
+      <!-- ad space -->
+      <aside id="ad-space">Your Ad Here</aside>
+      <!-- footer-->
+      <app-footer></app-footer>
+    </section>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
