@@ -1,12 +1,14 @@
-<button mat-icon-button aria-label="new ticket" id="add-ticket" (click)="incrementTotal()" >
-     <mat-icon>add</mat-icon> 
-</button>
+<main id='ticket-container'>
+  <app-ticket *ngFor="let ticket of tickets"></app-ticket>
+  <button mat-icon-button aria-label="new ticket" id="add-ticket" (click)="addAdultTicket()" >
+    <mat-icon>add</mat-icon> 
+  </button>
+  <button mat-icon-button aria-label="new ticket" id="add-child-ticket" (click)="addChildTicket()" >
+    <mat-icon>child_care</mat-icon> 
+  </button>
+  <button mat-icon-button aria-label="delete ticket" id="add-ticket" (click)="removeTicket()" >
+    <mat-icon>clear</mat-icon> 
+  </button>
+</main>
 
-    <app-ticket *ngFor="let ticket of tickets"></app-ticket>
-
-
-<p>Total: {{total}}</p>
-
-<button mat-flat-button id="proceed">
-        proceed to payment
-</button>
+<p>Total: €{{total}}</p>

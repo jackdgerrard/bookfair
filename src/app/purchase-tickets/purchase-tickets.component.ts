@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-class Ticket {
+interface Ticket {
   name: string;
   price: number;
-
-  constructor(x: string, y: number){
-    this.name = x;
-    this.price = y;
-  }
 }
 
 @Component({
@@ -21,15 +16,31 @@ export class PurchaseTicketsComponent implements OnInit {
   tickets: Ticket[];
 
   constructor() {
-    this.total = 0;
    }
 
   ngOnInit() {
+    this.total = 0;
+    this.tickets = [];
   }
 
-  incrementTotal() {
-    this.total ++;
-    this.tickets.push(new Ticket('john', 5));
+  addAdultTicket() {
+    this.tickets.push({
+      name: `Ticket ${this.tickets.length + 1}`,
+      price: 5
+    });
+    this.total += 5;
   }
 
+  addChildTicket() {
+    this.tickets.push({
+      name: `Ticket ${this.tickets.length + 1}`,
+      price: 3
+    });
+    this.total += 3;
+  }
+
+  removeTicket() {
+    this.total -= this.tickets[this.tickets.length -1].price;
+    this.tickets.pop();
+  }
 }
