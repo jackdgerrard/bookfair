@@ -1,15 +1,21 @@
-content *{font-family: 'Pacifico', cursive;}
+@font-face{
+  font-family: "caveat";
+  src: url("/assets/Caveat-Regular.ttf");
+}
+
+*{
+  font-family: caveat;
+}
 
 .sidenav-container {
   height: 100%;
 }
 
 .sidenav {
-  width: 18%;
+  width: 25vw;
   background: #F2994A;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 #title{
@@ -19,14 +25,13 @@ content *{font-family: 'Pacifico', cursive;}
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Pacifico', cursive;
+  margin-left: auto;
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
-  margin-left:1vw;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background: #141E30;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
@@ -66,4 +71,10 @@ aside{
 
 app-footer{
   grid-row-start: 2;
+}
+
+#show-rules p{
+  font-family: 'Courier New', Courier, monospace;
+  background: #eee;
+  color: black;
 }

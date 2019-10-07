@@ -25,6 +25,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatFormFieldModule, MatFormField } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 
 import { FormsModule } from '@angular/forms';
 import { TicketComponent } from './ticket/ticket.component';
@@ -55,6 +56,7 @@ import { environment } from '../environments/environment';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatCheckboxModule,
     MatGridListModule,
     MatCardModule,
     MatMenuModule,

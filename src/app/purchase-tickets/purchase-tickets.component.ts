@@ -14,6 +14,7 @@ interface Ticket {
 export class PurchaseTicketsComponent implements OnInit {
   total: number;
   tickets: Ticket[];
+  showRules = false;
 
   constructor() {
    }
@@ -43,4 +44,9 @@ export class PurchaseTicketsComponent implements OnInit {
     this.total -= this.tickets[this.tickets.length -1].price;
     this.tickets.pop();
   }
+
+  toggleRuleBox() {
+    this.showRules = !this.showRules;
+  }
+
 }

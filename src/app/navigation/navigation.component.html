@@ -12,13 +12,13 @@
     
     <!--toolbar-->
     <mat-toolbar color="primary">
-      <button
+      <button mat-icon-button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon">menu_open</mat-icon>
       </button>
       <a id="title" routerLink="">Cork City Book Fair</a>
     </mat-toolbar>
