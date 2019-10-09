@@ -3,11 +3,7 @@
   src: url("/assets/Caveat-Regular.ttf");
 }
 
-* {
-  font-family: caveat;
-}
-
-
+*:not(mat-icon) {font-family: caveat;}
 
 .sidenav-container {
   height: 100%;
