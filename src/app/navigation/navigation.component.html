@@ -12,10 +12,11 @@
     
     <!--toolbar-->
     <mat-toolbar color="primary">
-      <button mat-icon-button
+      <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
+        id="menu-button"
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu_open</mat-icon>

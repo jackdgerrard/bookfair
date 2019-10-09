@@ -3,9 +3,11 @@
   src: url("/assets/Caveat-Regular.ttf");
 }
 
-*{
+* {
   font-family: caveat;
 }
+
+
 
 .sidenav-container {
   height: 100%;
@@ -31,7 +33,6 @@
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
-  z-index: 1;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background: #141E30;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
@@ -42,8 +43,8 @@ mat-sidenav-content{
   // background
   background: url("/assets/bookshelves.jpg");
   background-size: 100%;
-  background-color: rgba(0,0,0, 0.6);
   color: white;
+  
 }
 
 #the-grid{
@@ -71,10 +72,4 @@ aside{
 
 app-footer{
   grid-row-start: 2;
-}
-
-#show-rules p{
-  font-family: 'Courier New', Courier, monospace;
-  background: #eee;
-  color: black;
 }
