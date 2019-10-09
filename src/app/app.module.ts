@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -25,12 +24,13 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatFormFieldModule, MatFormField } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
 import { TicketComponent } from './ticket/ticket.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import { environment } from '../environments/environment';
     ExhibitorsComponent,
     AppFooterComponent,
     PurchaseTicketsComponent,
-    TicketComponent
+    TicketComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +65,11 @@ import { environment } from '../environments/environment';
     MatFormFieldModule,
     MatInputModule,
     MatSlideToggleModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AgmCoreModule.forRoot({
+      // this api key is restricted to jgerrard.com on the google cloud platform
+      apiKey: 'AIzaSyD1pe9NOgxKC9iweSIFnN_KvGqwk-Xdh4U'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
