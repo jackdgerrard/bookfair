@@ -6,24 +6,22 @@
 
 #purchase-block, main{ 
   background-color: rgba(53, 29, 29, 0.6);
-    padding: 8px;
+  padding: 8px;
 }
 
-#Rulebox{
+#RuleBox{
+  p{
+    background: white;
+    color: black;
     font-family: 'Courier New', Courier, monospace;
-    color:black;
-    position: fixed; /* Stay in place */
-    z-index: 999; /* Sit on top */
-    width: 80vw; /* Full width */
-    height: 80vh; /* Full height */
-    padding:8px;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(247, 242, 242);
-
-    #hide-rule-box{
-        position: fixed;
-        background: white;
-        background-color: rgba(247, 242, 242, 0.5);
-        color:rgba(6, 8, 99, 0.6)
-    }
   }
+
+  #hide-rule-box{
+    position: fixed;
+    background: white;
+    background-color: rgba(247, 242, 242, 0.5);
+    color:rgba(6, 8, 99, 0.6);
+    display: block;
+    margin-top: -20px;
+  }
+}
