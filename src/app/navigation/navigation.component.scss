@@ -38,9 +38,12 @@
 mat-sidenav-content{
   // background
   background: url("/assets/bookshelves.jpg");
-  background-size: 100%;
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
   color: white;
-  
 }
 
 #the-grid{
@@ -59,7 +62,7 @@ aside{
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 3;
-  background-color: rgba(53, 29, 29, 0.6);
+  background-color: rgba(53, 29, 29, 0.9);
   color: #eee;
   text-align: center;
   padding-top:50%;

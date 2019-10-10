@@ -31,6 +31,7 @@ import { TicketComponent } from './ticket/ticket.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MapComponent } from './map/map.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,7 @@ import { MapComponent } from './map/map.component';
       apiKey: 'AIzaSyD1pe9NOgxKC9iweSIFnN_KvGqwk-Xdh4U'
     })
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
