@@ -32,6 +32,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MapComponent } from './map/map.component';
 import { CookieService } from 'ngx-cookie-service';
+import { RulesComponent } from './rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CookieService } from 'ngx-cookie-service';
     AppFooterComponent,
     PurchaseTicketsComponent,
     TicketComponent,
-    MapComponent
+    MapComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,
