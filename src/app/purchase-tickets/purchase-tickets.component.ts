@@ -49,4 +49,8 @@ export class PurchaseTicketsComponent implements OnInit {
     this.showRules = !this.showRules;
   }
 
+  purchase() {
+    alert('tickets purchased');
+  }
+
 }

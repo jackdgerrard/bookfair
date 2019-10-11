@@ -19,11 +19,13 @@
   <p>Total: €{{total}}</p>
   <mat-checkbox type="checkbox">I agree to the terms of sale
   </mat-checkbox> <br>
-  <button mat-button *ngIf="!showRules"(click)="toggleRuleBox()">show rules</button>
-  <button mat-icon-button aria-label="toggle rules modal" id="hide-rule-box" (click)="toggleRuleBox()" >
+  <button mat-button *ngIf="!showRules" (click)="toggleRuleBox()">show rules</button>
+  <button mat-icon-button aria-label="toggle rules modal" *ngIf="showRules" id="hide-rule-box" (click)="toggleRuleBox()" >
     <mat-icon>clear</mat-icon> 
   </button>
   <app-rules *ngIf='showRules'></app-rules>
   <p>Tickets also available at the morning of the event for €3</p>
+  
+  <button mat-button id="purchase-button" (click)="purchase()">Purchase Tickets</button>
 </article>
 
